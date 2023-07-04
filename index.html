@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   
+        <input type="checkbox" name="" id="tog">
+        
+            <label for="tog" class="lbl1"></label>
+            <!-- <i class="fa-sharp fa-light fa-sun"></i> -->
+            <script>
+                let inp=document.querySelector("#tog");
+                // let bd=document.querySelector("body");
+               let mod="light";
+            //    localStorage.setItem("name",mod);
+
+               console.log(inp.checked);
+               let lbl=document.querySelector(".lbl1");
+               
+               lbl.addEventListener('click',()=>{
+                   
+                   document.body.classList.toggle("black")
+                   if(document.body.classList.contains("black"))
+                   {
+                    console.log(document.body.classList.contains("black"))
+                       mod="dark";
+                       
+                       localStorage.setItem("name",mod);
+                    }
+                    else{
+                        mod="light";
+                       localStorage.setItem("name",mod);
+
+                       
+
+                    }
+                    
+                 
+            })
+
+
+            if(localStorage.getItem("name")=="dark")
+            {
+                document.body.classList.add("black")
+                inp.checked=true;
+
+            }    
+            // else{
+            //     document.body.classList.remove("black")
+
+            // }        
+
+
+
+
+            </script>
+
+       
+    
+</body>
+</html>
